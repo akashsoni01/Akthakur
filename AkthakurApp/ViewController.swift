@@ -16,7 +16,7 @@ class ViewController: UIViewController ,UIWebViewDelegate{
         super.viewDidLoad()
         webView.delegate = self
         
-        webView.loadRequest(URLRequest(url: URL(string: "https://www.google.com")!))
+        webView.loadRequest(URLRequest(url: URL(string: "http://akthakur.me/")!))
         // Do any additional setup after loading the view, typically from a nib.
     }
 
