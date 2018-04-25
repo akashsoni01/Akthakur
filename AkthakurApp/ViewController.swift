@@ -15,20 +15,8 @@ class ViewController: UIViewController ,UIWebViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.delegate = self
-        if let unwrappedUrl = url{
-            let request = URLRequest(url: unwrappedUrl)
-            let session = URLSession.shared
-            let task = session.dataTask(with: unwrappedUrl){
-                (data,response,error) in
-                
-                if error == nil{
-                    self.webView.loadRequest(request)
-                }else{
-                    print("Error \(error)")
-                }
-            }
-            task.resume()
-        }
+        
+        webView.loadRequest(URLRequest(url: URL(string: "http://akthakur.me")!))
         // Do any additional setup after loading the view, typically from a nib.
     }
 
